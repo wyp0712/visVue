@@ -4,6 +4,8 @@ import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
+let dynamicComponent = resolve => require(['@/views/dynamicComponent/index.vue'], resolve)
+
 export default new Router({
   mode: 'history',
   routes: [
@@ -13,9 +15,9 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/visbase',
-      name: 'visbase',
-      component: resolve => require(['@/views/dynamicComponent/index.vue'], resolve)
+      path: '/dynamicComponent',
+      name: 'dynamicComponent',
+      component: dynamicComponent
     }
   ]
 })
