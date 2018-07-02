@@ -16,7 +16,7 @@ new Vue({
   components: { App },
   template: '<App/>',
   created() {
-    this.$ajax.get('http://mock.bfe.360es.cn/mock/5b1de90a4e871971e001a4d5/example/visbase', {}).then(res => {
+    this.$ajax.get('', {}).then(res => {
       console.log(res)
     })
   }

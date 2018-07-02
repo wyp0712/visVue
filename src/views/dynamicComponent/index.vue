@@ -19,12 +19,17 @@
 
     },
     mounted() {
+      const s = new Set()
+      let arr = [1, 3, 3, 3, 3, 3, 54, 5, 6]
+      arr.forEach(x => s.add(x))
+      console.log(s)
       this.foo()
     },
     methods: {
        async foo() {
          let a = await new Promise((resolve) => {
            setTimeout(() => {
+
              resolve(23)
            }, 5000)
          })
